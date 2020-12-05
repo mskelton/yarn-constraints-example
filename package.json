@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "yarn-constraints-example",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ]
+}
