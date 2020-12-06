@@ -2,5 +2,8 @@
   "name": "package-a",
   "version": "1.0.0",
   "license": "ISC",
-  "homepage": "https://github.com/mskelton/yarn-constraints-example/tree/main/packages/package-a"
+  "homepage": "https://github.com/mskelton/yarn-constraints-example/tree/main/packages/package-a",
+  "dependencies": {
+    "react": "^17.0.1"
+  }
 }

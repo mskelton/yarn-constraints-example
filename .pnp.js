@@ -21,11 +21,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "yarn-constraints-example",
         "reference": "workspace:."
+      },
+      {
+        "name": "package-a",
+        "reference": "workspace:packages/package-a"
+      },
+      {
+        "name": "package-b",
+        "reference": "workspace:packages/package-b"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["package-a", ["workspace:packages/package-a"]],
+      ["package-b", ["workspace:packages/package-b"]],
       ["yarn-constraints-example", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -39,6 +49,64 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
           ],
           "linkType": "SOFT",
+        }]
+      ]],
+      ["js-tokens", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/js-tokens-npm-4.0.0-0ac852e9e2-1fc4e4667a.zip/node_modules/js-tokens/",
+          "packageDependencies": [
+            ["js-tokens", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["loose-envify", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/loose-envify-npm-1.4.0-6307b72ccf-5c3b47bbe5.zip/node_modules/loose-envify/",
+          "packageDependencies": [
+            ["loose-envify", "npm:1.4.0"],
+            ["js-tokens", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["object-assign", [
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/object-assign-npm-4.1.1-1004ad6dec-66cf021898.zip/node_modules/object-assign/",
+          "packageDependencies": [
+            ["object-assign", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["package-a", [
+        ["workspace:packages/package-a", {
+          "packageLocation": "./packages/package-a/",
+          "packageDependencies": [
+            ["package-a", "workspace:packages/package-a"],
+            ["react", "npm:17.0.1"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["package-b", [
+        ["workspace:packages/package-b", {
+          "packageLocation": "./packages/package-b/",
+          "packageDependencies": [
+            ["package-b", "workspace:packages/package-b"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["react", [
+        ["npm:17.0.1", {
+          "packageLocation": "./.yarn/cache/react-npm-17.0.1-98658812fc-a76d86ec97.zip/node_modules/react/",
+          "packageDependencies": [
+            ["react", "npm:17.0.1"],
+            ["loose-envify", "npm:1.4.0"],
+            ["object-assign", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["yarn-constraints-example", [
