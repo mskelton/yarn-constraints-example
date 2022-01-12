@@ -4,6 +4,6 @@
   "license": "ISC",
   "homepage": "https://github.com/mskelton/yarn-constraints-example/tree/main/packages/package-a",
   "dependencies": {
-    "react": "^17.0.1"
+    "react": "^17.0.2"
   }
 }
